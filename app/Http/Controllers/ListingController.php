@@ -61,7 +61,7 @@ class ListingController extends Controller
 
                 Listing::create($formFields);
 
-        ////////flash message, once listing is created send messsage that is stored in memory for 1 page 
+              ////////flash message, once listing is created send messsage that is stored in memory for 1 page 
               //  Session::flash('message' , 'Listing Created');
 
              return redirect('/')->with('message','Listing created successfully!');

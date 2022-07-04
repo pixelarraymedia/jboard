@@ -1,5 +1,7 @@
 <?php
 
+// this file currently models the tag filter for listings 
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,6 +18,7 @@ class Listing extends Model
     {   
 
         //if there is a tag display if not do nothing.
+
         if($filters['tag'] ?? false ) {
 
             $query->where('tags', 'like', '%' . request('tag') . '%' );
@@ -39,7 +42,7 @@ class Listing extends Model
         }
     }
 
-        //relationship to user
+        // Relationship to user
         public function user(){
             return $this->belongsTo(User::class, 'user_id');
         }

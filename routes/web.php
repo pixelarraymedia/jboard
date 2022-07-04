@@ -82,21 +82,6 @@ Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* fun stuff below
 //creating error page
 Route::get('/error', function () {
